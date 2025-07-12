@@ -35,10 +35,10 @@
 
         CHAR {
             bindings = <
-&kp ESC  &kp GRAVE          &none   &kp MINUS  &kp UNDERSCORE                                &kp LEFT_PARENTHESIS  &kp RPAR           &kp MINUS        &kp UNDERSCORE  &kp PIPE
-&none    &kp SQT            &none   &kp SEMI   &kp COMMA       &none      &kp SQT            &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp EXCLAMATION  &kp QUESTION    &none
-&none    &kp DOUBLE_QUOTES  &none   &kp COLON  &kp PERIOD      &none      &kp DOUBLE_QUOTES  &kp LBRC              &kp RBRC           &kp COMMA        &kp DOT         &none
-&trans   &trans             &trans  &trans     &trans          &none      &none              &trans                                                                    &trans
+&kp ESC  &kp GRAVE          &none   &kp MINUS  &kp UNDERSCORE                                &kp LEFT_PARENTHESIS  &kp RPAR           &kp PLUS         &kp ASTERISK      &kp PIPE
+&none    &kp SQT            &none   &kp SEMI   &kp COMMA       &none      &kp SQT            &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp EXCLAMATION  &kp QUESTION      &kp SLASH
+&none    &kp DOUBLE_QUOTES  &none   &kp COLON  &kp PERIOD      &none      &kp DOUBLE_QUOTES  &kp LBRC              &kp RBRC           &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH
+&trans   &trans             &trans  &trans     &trans          &none      &none              &trans                                                                      &trans
             >;
         };
 
