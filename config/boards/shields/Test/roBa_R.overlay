@@ -14,11 +14,25 @@
             ;
 };
 
+#include <input/processors.dtsi>
+
+&zip_temp_layer {
+	require-prior-idle-ms = <200>;
+	excluded-positions = <
+		18 // J
+		19 // K
+		21 // ;
+		34 // Ctrl
+	>;
+};
+
+
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
+	input-processor = <&zip_temp_layer 5 10000>;
     };
 };
 
@@ -57,8 +71,6 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <4>;
-        scroll-layers = <5>;
     };
 };
 
