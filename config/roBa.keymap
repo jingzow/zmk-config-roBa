@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
 #define SCROLL 5
@@ -63,6 +64,15 @@
 &none  &none  &none  &none  &none  &none      &none  &bt BT_NXT  &bt BT_PRV  &none  &none  &none
 &none  &none  &none  &none  &none  &none      &none  &none       &none       &none  &none  &none
 &none  &none  &none  &none  &none  &none      &none  &none                                 &none
+            >;
+        };
+
+        MOUSE {
+            bindings = <
+&none  &none  &none  &none  &none                    &none       &none     &none        &none  &none
+&none  &none  &none  &none  &none  &none      &none  &none       &mkp MB1  &mkp MB2     &none  &kp PRINTSCREEN
+&none  &none  &none  &none  &none  &none      &none  &kp K_COPY  &mkp MB3  &kp K_PASTE  &none  &none
+&none  &none  &none  &none  &none  &none      &none  &none                                     &kp LG(SPACE)
             >;
         };
     };
