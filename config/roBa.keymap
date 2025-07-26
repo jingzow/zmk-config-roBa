@@ -18,7 +18,7 @@
         };
 
         to_conf {
-            bindings = <&sl 0>;
+            bindings = <&sl 5>;
             key-positions = <40 39>;
         };
     };
