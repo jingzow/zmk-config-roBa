@@ -171,7 +171,7 @@
 &kp_after_exit_AML Q              &kp_after_exit_AML W  &kp_after_exit_AML E  &kp_after_exit_AML R          &kp_after_exit_AML T                                                                              &kp_after_exit_AML Y      &kp LC(LEFT_BRACKET)         &kp LC(UP)         &kp LC(RIGHT_BRACKET)  &kp_after_exit_AML LG(W)
 &kp_after_exit_AML A              &kp_after_exit_AML S  &kp_after_exit_AML D  &kp_after_exit_AML F          &kp_after_exit_AML G      &none                                    &kp K_COPY                     &kp_after_exit_AML H      &mkp_exit_AML_draggable MB1  &mkp_exit_AML MB3  &mkp_exit_AML MB2      &kp_after_exit_AML BSPC
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp_after_exit_AML X  &kp_after_exit_AML C  &kp_after_exit_AML V          &kp_after_exit_AML B      &kp_after_exit_AML ESC                   &kp K_PASTE                    &kp LC(LS(TAB))           &mkp MB4                     &kp LC(DOWN)       &mkp MB5               &kp LC(TAB)
-&none                             &none                 &none                 &mt_exit_AML_on_tap LALT TAB  &kp_after_exit_AML SPACE  &mt_exit_AML_on_tap LGUI LANGUAGE_2      &kp_after_exit_AML LANGUAGE_1  &kp_after_exit_AML LG(T)                                                                         &kp_after_exit_AML LG(SPACE)
+&none                             &none                 &none                 &mt_exit_AML_on_tap LALT TAB  &kp_after_exit_AML SPACE  &mt_exit_AML_on_tap LGUI LANGUAGE_2      &kp_after_exit_AML LANGUAGE_1  &kp_after_exit_AML LG(T)                                                                         &to 0
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -199,8 +199,8 @@
             bindings = <
 &kp MINUS           &kp N7  &kp N8     &kp N9    &kp R                               &none      &kp N      &kp I  &kp Q      &kp ESC
 &kp A               &kp N4  &kp N5     &kp N6    &kp F      &none             &none  &kp H      &kp J      &kp E  &kp X      &none
-&mt KP_PLUS LSHIFT  &kp N1  &kp N2     &kp N3    &kp K      &kp L             &none  &kp P      &kp LC(F)  &kp K  &kp LC(E)  &none
-&kp ESC             &kp N0  &kp LCTRL  &kp LALT  &kp SPACE  &kp LEFT_GUI      &none  &kp SPACE                               &to 0
+&mt KP_PLUS LSHIFT  &kp N1  &kp N2     &kp N3    &kp K      &kp ESCAPE        &none  &kp P      &kp LC(F)  &kp K  &kp LC(E)  &none
+&none               &kp N0  &kp LCTRL  &kp LALT  &kp SPACE  &kp LEFT_GUI      &none  &kp SPACE                               &to 0
             >;
         };
     };
