@@ -197,10 +197,10 @@
 
         cavesofqud {
             bindings = <
-&kp MINUS           &kp N7  &kp N8     &kp N9    &kp R                               &none      &kp N      &kp I  &kp Q      &kp ESC
-&kp A               &kp N4  &kp N5     &kp N6    &kp F      &none             &none  &kp H      &kp J      &kp E  &kp X      &none
-&mt KP_PLUS LSHIFT  &kp N1  &kp N2     &kp N3    &kp K      &kp ESCAPE        &none  &kp P      &kp LC(F)  &kp K  &kp LC(E)  &none
-&none               &kp N0  &kp LCTRL  &kp LALT  &kp SPACE  &kp LEFT_GUI      &none  &kp SPACE                               &to 0
+&kp MINUS           &kp N7  &kp N8     &kp N9    &kp R                                 &none      &kp N      &kp I  &kp Q      &kp ESC
+&kp A               &kp N4  &kp N5     &kp N6    &kp F      &kp KP_NUMLOCK      &none  &kp H      &kp J      &kp E  &kp X      &none
+&mt KP_PLUS LSHIFT  &kp N1  &kp N2     &kp N3    &kp K      &kp ESCAPE          &none  &kp P      &kp LC(F)  &kp K  &kp LC(E)  &none
+&none               &kp N0  &kp LCTRL  &kp LALT  &kp SPACE  &kp LEFT_GUI        &none  &kp SPACE                               &to 0
             >;
         };
     };
