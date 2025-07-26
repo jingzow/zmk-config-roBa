@@ -175,7 +175,7 @@
 
         CHAR {
             bindings = <
-&none           &kp GRAVE          &none          &none   &none                           &pair_parenthesis  &kp RPAR           &kp PLUS         &kp ASTERISK      &kp PIPE
+&kp TILDE       &kp GRAVE          &none          &none   &none                           &pair_parenthesis  &kp RPAR           &kp PLUS         &kp ASTERISK      &kp PIPE
 &kp MINUS       &kp SQT            &kp SEMICOLON  &none   &kp COMMA   &trans      &trans  &pair_bracket      &kp RIGHT_BRACKET  &kp EXCLAMATION  &kp QUESTION      &kp SLASH
 &kp UNDERSCORE  &kp DOUBLE_QUOTES  &kp COLON      &none   &kp PERIOD  &trans      &trans  &pair_brace        &kp RBRC           &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH
 &trans          &trans             &trans         &trans  &trans      &none       &none   &trans                                                                   &trans
