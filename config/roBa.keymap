@@ -123,22 +123,6 @@
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
-
-        caps_LGUI: caps_LGUI {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS_LGUI";
-            #binding-cells = <0>;
-            continue-list = <TAB>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        sl_250: sl_250 {
-            compatible = "zmk,behavior-sticky-key";
-            label = "SL_250";
-            bindings = <&mo>;
-            #binding-cells = <1>;
-            release-after-ms = <250>;
-        };
     };
 
     keymap {
