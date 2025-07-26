@@ -120,7 +120,7 @@
 &kp TAB       &none  &kp LCTRL  &kp LEFT_ALT  &mt LEFT_WIN SPACE  &lt 1 LANGUAGE_2      &lt 3 LANGUAGE_1  &lt 1 SPACE                                &kp LG(SPACE)
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
         };
 
         NUM_CHAR {
