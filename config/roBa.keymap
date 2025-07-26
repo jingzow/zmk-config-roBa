@@ -197,19 +197,19 @@
 
         cavesofqud {
             bindings = <
-&kp LS(COMMA)       &kp LS(UP)    &kp UP         &kp LS(RIGHT)  &kp R                                 &none      &kp N      &kp I  &kp Q      &kp ESC
-&kp A               &kp LEFT      &kp LS(SPACE)  &kp RIGHT      &kp F      &kp KP_NUMLOCK      &none  &kp H      &kp J      &kp E  &kp X      &none
-&mt LS(DOT) LSHIFT  &kp LS(LEFT)  &kp DOWN       &kp LS(DOWN)   &kp K      &kp ESCAPE          &none  &kp P      &kp LC(F)  &kp K  &kp LC(E)  &none
-&none               &kp LS(E)     &kp LCTRL      &mt LALT TAB   &kp SPACE  &kp LEFT_GUI        &none  &kp SPACE                               &to 0
+&kp LS(COMMA)       &kp LS(UP)    &kp UP         &kp LS(RIGHT)  &kp R                                   &none      &kp N      &kp I  &kp Q      &kp ESC
+&kp A               &kp LEFT      &kp LS(SPACE)  &kp RIGHT      &kp F        &kp KP_NUMLOCK      &none  &kp H      &kp J      &kp E  &kp X      &none
+&mt LS(DOT) LSHIFT  &kp LS(LEFT)  &kp DOWN       &kp LS(DOWN)   &kp K        &kp ESCAPE          &none  &kp P      &kp LC(F)  &kp K  &kp LC(E)  &none
+&none               &kp LS(E)     &kp LCTRL      &mt LALT TAB   &lt 8 SPACE  &none               &none  &kp SPACE                               &to 0
             >;
         };
 
-        layer_8 {
+        cavesofqud_num {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &kp N7  &kp N8  &kp N9  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &kp N4  &kp N5  &kp N6  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N0  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
