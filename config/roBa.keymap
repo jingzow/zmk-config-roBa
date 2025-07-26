@@ -160,10 +160,10 @@
 
         MOUSE_MACOS {
             bindings = <
-&trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML                                        &trans_exit_AML  &kp LC(LEFT_BRACKET)  &kp LC(UP)         &kp LC(RIGHT_BRACKET)  &trans_exit_AML
-&trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML      &trans_exit_AML  &trans_exit_AML  &mkp_exit_AML MB1     &mkp_exit_AML MB3  &mkp_exit_AML MB2      &kp LG(W)
-&trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML      &trans_exit_AML  &kp LC(LS(TAB))  &mkp MB4              &kp LC(DOWN)       &mkp MB5               &kp LC(TAB)
-&trans_exit_AML  &none            &none            &trans_exit_AML  &trans_exit_AML  &trans_exit_AML      &trans_exit_AML  &kp LG(T)                                                                        &trans_exit_AML
+&trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML                                        &trans_exit_AML     &kp LC(LEFT_BRACKET)  &kp LC(UP)         &kp LC(RIGHT_BRACKET)  &kp_exit_AML LG(W)
+&trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML      &trans_exit_AML  &trans_exit_AML     &mkp_exit_AML MB1     &mkp_exit_AML MB3  &mkp_exit_AML MB2      &trans_exit_AML
+&trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML  &trans_exit_AML      &trans_exit_AML  &kp LC(LS(TAB))     &mkp MB4              &kp LC(DOWN)       &mkp MB5               &kp LC(TAB)
+&trans_exit_AML  &none            &none            &trans_exit_AML  &trans_exit_AML  &trans_exit_AML      &trans_exit_AML  &kp_exit_AML LG(T)                                                                  &trans_exit_AML
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
