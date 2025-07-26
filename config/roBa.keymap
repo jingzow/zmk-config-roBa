@@ -34,15 +34,60 @@
         };
     };
 
+    macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+
+        mkp_exit_AML: mkp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&sl 4>;
+
+            label = "MKP_EXIT_AML";
+        };
+
+        pair_bracket: bracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            label = "BRACKET";
+        };
+
+        pair_brace: brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+            label = "BRACE";
+        };
+
+        pair_parenthesis: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q         &kp W  &kp E      &kp R         &kp T                                       &kp Y  &kp U  &kp I      &kp O       &kp P
-&kp A         &kp S  &kp D      &lt 2 F       &kp G         &none            &kp LANG1    &kp H  &kp J  &kp K      &kp L       &kp BACKSPACE
-&mt LSHIFT Z  &kp X  &kp C      &kp V         &kp B         &kp ESC          &kp LANG2    &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp ENTER
-&kp TAB       &none  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 SPACE      &lt 3 SPACE  &sl 1                                &kp LG(SPACE)
+&kp Q         &kp W  &kp E      &kp R         &kp T                                                       &kp Y        &kp U  &kp I      &kp O       &kp P
+&kp A         &kp S  &kp D      &lt 2 F       &kp G               &none                 &none             &kp H        &kp J  &kp K      &kp L       &kp BACKSPACE
+&mt LSHIFT Z  &kp X  &kp C      &kp V         &kp B               &kp ESC               &none             &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp ENTER
+&kp TAB       &none  &kp LCTRL  &kp LEFT_ALT  &mt LEFT_WIN SPACE  &lt 1 LANGUAGE_2      &lt 3 LANGUAGE_1  &lt 1 SPACE                                &kp LG(SPACE)
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -59,10 +104,10 @@
 
         CHAR {
             bindings = <
-&kp ESC         &kp GRAVE          &none          &none   &none                                       &kp LEFT_PARENTHESIS  &kp RPAR           &kp PLUS         &kp ASTERISK      &kp PIPE
-&kp MINUS       &kp SQT            &kp SEMICOLON  &none   &kp COMMA   &none        &kp SQT            &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp EXCLAMATION  &kp QUESTION      &kp SLASH
-&kp UNDERSCORE  &kp DOUBLE_QUOTES  &kp COLON      &none   &kp PERIOD  &kp ESC      &kp DOUBLE_QUOTES  &kp LBRC              &kp RBRC           &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH
-&trans          &trans             &trans         &trans  &trans      &none        &none              &trans                                                                      &trans
+&none           &kp GRAVE          &none          &none   &none                           &pair_parenthesis  &kp RPAR           &kp PLUS         &kp ASTERISK      &kp PIPE
+&kp MINUS       &kp SQT            &kp SEMICOLON  &none   &kp COMMA   &trans      &trans  &pair_bracket      &kp RIGHT_BRACKET  &kp EXCLAMATION  &kp QUESTION      &kp SLASH
+&kp UNDERSCORE  &kp DOUBLE_QUOTES  &kp COLON      &none   &kp PERIOD  &trans      &trans  &pair_brace        &kp RBRC           &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH
+&trans          &trans             &trans         &trans  &trans      &none       &none   &trans                                                                   &trans
             >;
         };
 
@@ -75,12 +120,12 @@
             >;
         };
 
-        MOUSE {
+        MOUSE_MACOS {
             bindings = <
-&none  &none  &none  &none  &none                          &none       &none  &none     &none     &none
-&none  &none  &none  &none  &none  &none      &none        &none       &none  &none     &none     &none
-&none  &none  &none  &none  &none  &none      &none        &none       &none  &mkp MB1  &mkp MB2  &none
-&none  &none  &none  &none  &none  &none      &kp K_PASTE  &kp K_COPY                             &kp LG(SPACE)
+&to_layer_0 Q    &to_layer_0 W  &to_layer_0 E  &to_layer_0 R  &to_layer_0 T                              &none            &kp LC(LEFT_BRACKET)  &kp LC(UP)         &kp LC(RIGHT_BRACKET)  &none
+&to_layer_0 A    &to_layer_0 S  &to_layer_0 D  &to_layer_0 F  &to_layer_0 G  &none                &none  &none            &mkp_exit_AML MB1     &mkp_exit_AML MB3  &mkp_exit_AML MB2      &kp LG(W)
+&to_layer_0 Z    &to_layer_0 X  &to_layer_0 C  &to_layer_0 V  &to_layer_0 B  &to_layer_0 ESC      &none  &kp LC(LS(TAB))  &mkp MB4              &kp LC(DOWN)       &mkp MB5               &kp LC(TAB)
+&to_layer_0 TAB  &none          &none          &none          &none          &none                &none  &kp LG(T)                                                                        &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
