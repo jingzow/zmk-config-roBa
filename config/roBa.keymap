@@ -107,6 +107,14 @@
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
+
+        caps_LGUI: caps_LGUI {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_LGUI";
+            #binding-cells = <0>;
+            continue-list = <TAB>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     keymap {
@@ -152,10 +160,10 @@
 
         MOUSE_MACOS {
             bindings = <
-&trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML                                                    &trans_after_exit_AML     &kp LC(LEFT_BRACKET)  &kp LC(UP)         &kp LC(RIGHT_BRACKET)  &kp_after_exit_AML LG(W)
-&trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML      &trans_after_exit_AML  &trans_after_exit_AML     &mkp_exit_AML MB1     &mkp_exit_AML MB3  &mkp_exit_AML MB2      &trans_after_exit_AML
-&trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML      &trans_after_exit_AML  &kp LC(LS(TAB))           &mkp MB4              &kp LC(DOWN)       &mkp MB5               &kp LC(TAB)
-&trans_after_exit_AML  &none                  &none                  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML      &trans_after_exit_AML  &kp_after_exit_AML LG(T)                                                                  &trans_after_exit_AML
+&trans_after_exit_AML             &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML                                                    &trans_after_exit_AML     &kp LC(LEFT_BRACKET)  &kp LC(UP)         &kp LC(RIGHT_BRACKET)  &kp_after_exit_AML LG(W)
+&trans_after_exit_AML             &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML      &trans_after_exit_AML  &trans_after_exit_AML     &mkp_exit_AML MB1     &mkp_exit_AML MB3  &mkp_exit_AML MB2      &trans_after_exit_AML
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML      &trans_after_exit_AML  &kp LC(LS(TAB))           &mkp MB4              &kp LC(DOWN)       &mkp MB5               &kp LC(TAB)
+&trans_after_exit_AML             &none                  &none                  &trans_after_exit_AML  &trans_after_exit_AML  &trans_after_exit_AML      &trans_after_exit_AML  &kp_after_exit_AML LG(T)                                                                  &trans_after_exit_AML
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
