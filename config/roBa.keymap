@@ -24,13 +24,6 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-
         mkp_exit_AML: mkp_exit_AML {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -41,7 +34,7 @@
                 <&macro_release>,
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&sl 4>;
+                <&exit_AML>;
 
             label = "MKP_EXIT_AML";
         };
@@ -96,7 +89,7 @@
             tap-ms = <20>;
         };
 
-       tog_off: toggle_layer_off {
+        tog_off: toggle_layer_off {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
             display-name = "Toggle Layer Off";
@@ -158,10 +151,10 @@
 
         MOUSE_MACOS {
             bindings = <
-&to_layer_0 Q    &to_layer_0 W  &to_layer_0 E  &to_layer_0 R  &to_layer_0 T                              &none            &kp LC(LEFT_BRACKET)  &kp LC(UP)         &kp LC(RIGHT_BRACKET)  &none
-&to_layer_0 A    &to_layer_0 S  &to_layer_0 D  &to_layer_0 F  &to_layer_0 G  &none                &none  &none            &mkp_exit_AML MB1     &mkp_exit_AML MB3  &mkp_exit_AML MB2      &kp LG(W)
-&to_layer_0 Z    &to_layer_0 X  &to_layer_0 C  &to_layer_0 V  &to_layer_0 B  &to_layer_0 ESC      &none  &kp LC(LS(TAB))  &mkp MB4              &kp LC(DOWN)       &mkp MB5               &kp LC(TAB)
-&to_layer_0 TAB  &none          &none          &none          &none          &none                &none  &kp LG(T)                                                                        &none
+&kp_exit_AML Q    &kp_exit_AML W  &kp_exit_AML E  &kp_exit_AML R  &kp_exit_AML T                                                            &kp_exit_AML Y   &kp LC(LEFT_BRACKET)  &kp LC(UP)         &kp LC(RIGHT_BRACKET)  &kp_exit_AML P
+&kp_exit_AML A    &kp_exit_AML S  &kp_exit_AML D  &kp_exit_AML F  &kp_exit_AML G      &none                        &none                    &kp_exit_AML H   &mkp_exit_AML MB1     &mkp_exit_AML MB3  &mkp_exit_AML MB2      &kp LG(W)
+&kp_exit_AML Z    &kp_exit_AML X  &kp_exit_AML C  &kp_exit_AML V  &kp_exit_AML B      &kp_exit_AML ESC             &none                    &kp LC(LS(TAB))  &mkp MB4              &kp LC(DOWN)       &mkp MB5               &kp LC(TAB)
+&kp_exit_AML TAB  &none           &none           &none           &kp_exit_AML SPACE  &kp_exit_AML LANGUAGE_2      &kp_exit_AML LANGUAGE_1  &kp LG(T)                                                                        &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
